@@ -1,0 +1,21 @@
+trigger:
+- none
+
+resources:
+- repo: self
+
+variables:
+- template: vars/vars_tag.yaml
+- template: vars/vars_pipeline.yaml
+
+stages:
+  - template: Templates/azure-pipelines-template-sample.yml
+    parameters:
+      tag: ${{variables.tag_sample}}
+      dockerRegistryServiceConnection: $(dockerRegistryServiceConnection)
+      containerRegistry: $(containerRegistry)
+      dockerfilePath: '<Dockerfile_path>'
+      imagePullSecret: $(imagePullSecret)
+      vmImageName: $(vmImageName)
+      imageRepository: $(imageRepositorySample)     
+      environment: $(environment)
