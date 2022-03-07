@@ -4,6 +4,8 @@
 
 Dx29 Pipelines Only deployment tasks
 ==============================================================================================================================================
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
 ### **Overview**
 
 It will be the same as the [deployment all pipeline](https://github.com/foundation29org/Dx29.Pipelines_all) but only with the deploy stages. In this case only the selected images will be accessed with the input parameter tag/version and deployed to the cluster. The pipelines can be found in a container registry, yet compiled, build and tested. This pipeline will also not be executed automatically but must be launched manually.
